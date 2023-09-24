@@ -1,6 +1,11 @@
 <div class="info-form-ctr">
     <h2>Vehicle Information Form</h2>
     <form [formGroup]="infoForm" (submit)="handleSubmit()" class="info-form">
+        <mat-form-field class="idNo" appearance="outline">
+            <mat-label>Vehicle ID Number</mat-label>
+            <input matInput formControlName="idNo" />
+        </mat-form-field>
+
         <mat-form-field class="licenseNo" appearance="outline">
             <mat-label>Vehicle License Number</mat-label>
             <input matInput formControlName="licenseNo" />
