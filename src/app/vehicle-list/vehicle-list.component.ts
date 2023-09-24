@@ -22,7 +22,11 @@ export class VehicleListComponent {
     });
   }
 
-  updateVehicle(license: string) {
-    
+  updateVehicle(id: number) {
+    const selectedVehicle = this.vehicles.find(vehicle => vehicle.id === id);
+
+    if (selectedVehicle){
+      this.vService.updateVehicle
+    }
   }
 }

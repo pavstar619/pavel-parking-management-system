@@ -12,8 +12,9 @@
             {{ vehicle.exitTime ? vehicle.exitTime : 'Still parked' }}
         </p>
         <p><span>Status:</span> {{ vehicle.status }}</p>
-        <button mat-flat-button color="primary" (click)="updateVehicle(vehicle.licenseNo)">
+        <!-- <button mat-flat-button color="primary" (click)="updateVehicle(vehicle.id)">
             Edit
-        </button>
+        </button> -->
+        <a mat-flat-button color="primary" routerLink="/detail/{{vehicle.id}}">Edit</a>
     </div>
 </div>
