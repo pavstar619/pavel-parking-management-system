@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { VehicleInfo } from '../vehicle-info';
-import { ChartConfiguration, ChartOptions, ChartType } from "chart.js";
 
 @Component({
   selector: 'app-parking-summary-chart',
@@ -12,9 +11,6 @@ export class ParkingSummaryChartComponent {
     data: [] as number[]
   }];
   public lineChartLabels: string[] = [];
-  public lineChartOptions: ChartOptions<'line'> = {
-    responsive: false
-  };
   public lineChartLegend: boolean = true;
 
   constructor() { }
@@ -73,17 +69,11 @@ export class ParkingSummaryChartComponent {
   }
 
   calculateWeeklySummary(date: Date): number {
-    // Implement logic to calculate weekly summary
-    // Example: Count the number of parked cars for the current week
-    // You can adjust this logic based on your requirements
-    return 0; // Placeholder, replace with actual calculation
+    return 0;
   }
 
   calculateMonthlySummary(date: Date): number {
-    // Implement logic to calculate monthly summary
-    // Example: Count the number of parked cars for the current month
-    // You can adjust this logic based on your requirements
-    return 0; // Placeholder, replace with actual calculation
+    return 0;
   }
 
   formatDateLabel(date: Date): string {
