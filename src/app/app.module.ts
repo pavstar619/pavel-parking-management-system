@@ -21,13 +21,15 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfoFormComponent,
     VehicleListComponent,
-    VehicleDetailsComponent
+    VehicleDetailsComponent,
+    DashboardComponent
   ],
   imports: [
     FormsModule,
