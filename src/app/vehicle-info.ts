@@ -1,5 +1,5 @@
 export interface VehicleInfo {
-    id: string;
+    id: number;
     licenseNo: string;
     type: string;
     ownerName: string;

@@ -20,4 +20,13 @@ export class VehicleService {
   getAllVehicles(): Observable<VehicleInfo[]> {
     return this.http.get<VehicleInfo[]>(this.baseUrl);
   }
+
+  getVehicle(id: number): Observable<VehicleInfo> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<VehicleInfo>(url);
+  }
+
+  updateVehicle(vehicle: VehicleInfo): Observable<any> {
+    return this.http.put(this.baseUrl, vehicle, this.httpOptions);
+  }
 }

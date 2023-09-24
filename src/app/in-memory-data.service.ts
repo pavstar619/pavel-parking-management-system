@@ -19,6 +19,17 @@ export class InMemoryDataService implements InMemoryDbService {
         parkingCharge: 100,
         id: "4"
       },
+      {
+        licenseNo: "66",
+        type: "car11",
+        ownerName: "Ramy11",
+        ownerAddress: "asdash jhfkasf poasf saof11",
+        ownerPhone: "2141254523",
+        status: "in",
+        entryTime: "2023-04-11T04:43:30.874Z",
+        parkingCharge: 100,
+        id: "5"
+      },
     ];
     return { vehiclesInfo };
   }

@@ -12,7 +12,6 @@ export class InfoFormComponent {
   @Input() update: boolean = false;
 
   infoForm = this.fb.group({
-    id: new FormControl('', [Validators.required]),
     licenseNo: new FormControl('', [Validators.required]),
     type: new FormControl('', [Validators.required]),
     ownerName: new FormControl('', [Validators.required]),
@@ -43,7 +42,6 @@ export class InfoFormComponent {
     console.log(this.infoForm.value);
 
     const {
-      id,
       licenseNo,
       type,
       ownerName,
@@ -55,7 +53,6 @@ export class InfoFormComponent {
     } = this.infoForm.value;
 
     if (
-      id &&
       licenseNo &&
       type &&
       ownerName &&
@@ -65,6 +62,7 @@ export class InfoFormComponent {
       entryTime &&
       parkingCharge
     ) {
+      const id = Math.floor(Math.random() * 100);
       if (!this.update)
       this.vService
       .createVehicleInfo({
