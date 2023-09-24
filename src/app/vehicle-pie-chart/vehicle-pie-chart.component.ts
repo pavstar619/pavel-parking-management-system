@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { VehicleInfo } from '../vehicle-info';
+import { ChartOptions } from 'chart.js';
 
 @Component({
   selector: 'app-vehicle-pie-chart',
@@ -9,13 +10,15 @@ export class VehiclePieChartComponent {
   @Input() vehicles: VehicleInfo[] = [];
 
   public pieChartLabels: string[] = [];
-  // public pieChartData: number[] = [];
-  public pieChartData = [ {
+  public pieChartOptions: ChartOptions<'pie'> = {
+    responsive: false,
+  };
+  public pieChartData = [{
     data: [] as number[]
-  } ];
+  }];
   public pieChartType: string = 'pie';
 
-  constructor() {}
+  constructor() { }
 
   ngOnChanges() {
     this.updateChartData();
@@ -42,8 +45,8 @@ export class VehiclePieChartComponent {
       }
     }
 
-        // Populate chart data
-        const data: number[] = Object.values(vehicleTypeCounts);
-        this.pieChartData[0].data = data;
+    // Populate chart data
+    const data: number[] = Object.values(vehicleTypeCounts);
+    this.pieChartData[0].data = data;
   }
 }

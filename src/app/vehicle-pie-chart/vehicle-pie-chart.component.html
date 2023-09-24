@@ -1,8 +1,5 @@
+<h2>Vehicle Pie Chart</h2>
 <div style="display: block">
-    <canvas baseChart
-            [datasets]="pieChartData"
-            [labels]="pieChartLabels"
-            [type]="'pie'">
+    <canvas height="400" width="400" baseChart [datasets]="pieChartData" [labels]="pieChartLabels" [type]="'pie'" [options]="pieChartOptions">
     </canvas>
-  </div>
-  
+</div>

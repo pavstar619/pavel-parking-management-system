@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgChartsModule } from 'ng2-charts';
 import { VehiclePieChartComponent } from './vehicle-pie-chart/vehicle-pie-chart.component';
+import { ParkingSummaryChartComponent } from './parking-summary-chart/parking-summary-chart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { VehiclePieChartComponent } from './vehicle-pie-chart/vehicle-pie-chart.
     VehicleListComponent,
     VehicleDetailsComponent,
     DashboardComponent,
-    VehiclePieChartComponent
+    VehiclePieChartComponent,
+    ParkingSummaryChartComponent
   ],
   imports: [
     FormsModule,
