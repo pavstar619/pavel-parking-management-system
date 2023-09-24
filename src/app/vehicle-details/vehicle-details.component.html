@@ -1,12 +1,36 @@
 <h2>Vehicle Details</h2>
 <div *ngIf="vehicle">
-  <p>{{ vehicle.ownerName}}</p>
-  <!--     <h2>{{hero.name | uppercase}} Details</h2>
-    <div>id: {{hero.id}}</div>
-    <div>
-      <label for="hero-name">Hero name: </label>
-      <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
-    </div> -->
+  <div>id: {{vehicle.id}}</div>
+  <div>
+    <label for="vehicle-license-no">Vehicle license number: </label>
+    <input id="vehicle-license-no" [(ngModel)]="vehicle.licenseNo" placeholder="licenseNo">
+
+    <label for="vehicle-type">Vehicle type: </label>
+    <input id="vehicle-type" [(ngModel)]="vehicle.type" placeholder="type">
+    
+    <label for="vehicle-name">Vehicle owner name: </label>
+    <input id="vehicle-name" [(ngModel)]="vehicle.ownerName" placeholder="name">
+
+    <label for="vehicle-phone">Vehicle owner phone: </label>
+    <input id="vehicle-phone" [(ngModel)]="vehicle.ownerPhone" placeholder="vehicle-phone">
+
+    <label for="status">Status </label>
+    <input id="status" [(ngModel)]="vehicle.status" placeholder="status">
+
+    <label for="address">Vehicle Owner Address</label>
+    <input id="address" [(ngModel)]="vehicle.ownerAddress" placeholder="address">
+
+    <label for="entry-at">Entry at</label>
+    <input id="entry-at" [(ngModel)]="vehicle.entryTime" placeholder="entry-at">
+
+    <label for="exit-at">Exit at</label>
+    <input id="exit-at" [(ngModel)]="vehicle.exitTime" placeholder="exit-at">
+
+    <label for="parking-charge">Parking Charge</label>
+    <input id="parking-charge" [(ngModel)]="vehicle.parkingCharge" placeholder="parking-charge">
+
+
+  </div>
 </div>
 <button type="button" (click)="goBack()">go back</button>
 <button type="button" (click)="save()">save</button>
