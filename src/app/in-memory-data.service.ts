@@ -15,13 +15,13 @@ export class InMemoryDataService implements InMemoryDbService {
         ownerAddress: "asdash jhfkasf poasf saof",
         ownerPhone: "21412545",
         status: "in",
-        entryTime: "2023-04-11T04:43:30.874Z",
+        entryTime: "2023-09-24T04:43:30.874Z",
         parkingCharge: 100,
         id: "4"
       },
       {
         licenseNo: "66",
-        type: "car11",
+        type: "car",
         ownerName: "Ramy11",
         ownerAddress: "asdash jhfkasf poasf saof11",
         ownerPhone: "2141254523",
@@ -29,6 +29,17 @@ export class InMemoryDataService implements InMemoryDbService {
         entryTime: "2023-04-11T04:43:30.874Z",
         parkingCharge: 100,
         id: "5"
+      },
+      {
+        licenseNo: "664",
+        type: "truck",
+        ownerName: "Ramy111",
+        ownerAddress: "asdash jhfkasf poasf saof11ee",
+        ownerPhone: "2141254523e",
+        status: "in",
+        entryTime: "2023-04-11T04:43:30.874Z",
+        parkingCharge: 100,
+        id: "7"
       },
     ];
     return { vehiclesInfo };

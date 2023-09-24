@@ -22,14 +22,16 @@ import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { NgChartsModule } from 'ng2-charts';
+import { VehiclePieChartComponent } from './vehicle-pie-chart/vehicle-pie-chart.component';
 @NgModule({
   declarations: [
     AppComponent,
     InfoFormComponent,
     VehicleListComponent,
     VehicleDetailsComponent,
-    DashboardComponent
+    DashboardComponent,
+    VehiclePieChartComponent
   ],
   imports: [
     FormsModule,
@@ -48,6 +50,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatNativeDateModule,
     MatButtonModule,
     HttpClientModule,
+    NgChartsModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
