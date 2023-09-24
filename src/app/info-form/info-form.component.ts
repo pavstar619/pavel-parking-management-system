@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { VehicleService } from '../vehicle.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-info-form',
@@ -34,12 +36,13 @@ export class InfoFormComponent {
     { value: 'out', viewValue: 'Out' },
   ];
 
-  constructor(private fb: FormBuilder, private vService: VehicleService) {}
+  constructor(private fb: FormBuilder, private vService: VehicleService, private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   handleSubmit() {
     console.log(this.infoForm.value);
+    alert('submitted');
 
     const {
       licenseNo,
@@ -64,22 +67,23 @@ export class InfoFormComponent {
     ) {
       const id = Math.floor(Math.random() * 100);
       if (!this.update)
-      this.vService
-      .createVehicleInfo({
-        id,
-        licenseNo,
-        type,
-        ownerName,
-        ownerAddress,
-        ownerPhone,
-        status,
-        entryTime,
-        parkingCharge,
-      })
-      .subscribe((v) => v);
+        this.vService
+          .createVehicleInfo({
+            id,
+            licenseNo,
+            type,
+            ownerName,
+            ownerAddress,
+            ownerPhone,
+            status,
+            entryTime,
+            parkingCharge,
+          })
+          .subscribe((v) => v);
     } else {
-      
+
     }
+
+    this.router.navigate(['/vehicle-list']);
   }
 }
-  
